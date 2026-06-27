@@ -37,7 +37,7 @@ const HOTELS_DATA = [
     num: "04",
     name: "RIMBA by SVARNA Bali",
     description: "A lush, forest-canopy sanctuary surrounded by multiple tiered swimming pools, boasting spectacular sunset forest views, perfect for families and couples.",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=800",
     link: "#",
     badge: "Forest Sanctuary"
   }
@@ -45,7 +45,7 @@ const HOTELS_DATA = [
 
 export default function Hotels() {
   return (
-    <section id="hotels" className="py-32 px-6 lg:px-16 bg-[#121212] text-brand-cream border-t border-[#2a2a2a]">
+    <section id="hotels" className="py-32 px-6 lg:px-16 bg-background text-foreground border-t border-border">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24 items-start reveal">
@@ -53,7 +53,7 @@ export default function Hotels() {
             <span className="text-[10px] font-semibold tracking-[0.35em] text-brand-gold uppercase block mb-3">
               One Resort, Four Destinations
             </span>
-            <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-white leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-foreground leading-tight">
               SVARNA Hotels
             </h2>
           </div>
@@ -70,10 +70,10 @@ export default function Hotels() {
           {HOTELS_DATA.map((hotel, index) => (
             <div
               key={hotel.id}
-              className="break-inside-avoid flex flex-col bg-[#1c1c1c] border border-[#2a2a2a] hover:border-brand-gold/20 transition-all duration-700 overflow-hidden relative reveal mb-12"
+              className="break-inside-avoid flex flex-col bg-card border border-border hover:border-brand-gold/20 transition-all duration-700 overflow-hidden relative reveal mb-12"
             >
               {/* Massive watermark numerals */}
-              <div className="absolute top-2 right-6 text-7xl lg:text-8xl font-light tracking-normal text-[#2a2a2a]/30 pointer-events-none font-serif select-none z-10">
+              <div className="absolute top-2 right-6 text-7xl lg:text-8xl font-light tracking-normal text-border/30 dark:text-[#2a2a2a]/30 pointer-events-none font-serif select-none z-10">
                 {hotel.num}
               </div>
 
@@ -102,7 +102,7 @@ export default function Hotels() {
               {/* Info Container */}
               <div className="p-8 flex-grow flex flex-col justify-between space-y-6">
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-light tracking-wide text-white">
+                  <h3 className="text-2xl font-light tracking-wide text-foreground">
                     {hotel.name}
                   </h3>
                   <p className="text-xs lg:text-sm text-brand-grey leading-relaxed font-serif">
@@ -112,7 +112,7 @@ export default function Hotels() {
                 <div className="pt-2">
                   <Link
                     href={hotel.link}
-                    className="inline-flex items-center text-[10px] font-bold tracking-[0.25em] uppercase text-brand-gold hover:text-brand-cream transition-colors mt-auto"
+                    className="inline-flex items-center text-[10px] font-bold tracking-[0.25em] uppercase text-brand-gold hover:text-foreground transition-colors mt-auto"
                   >
                     <span className="mr-2">Explore Hotel</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

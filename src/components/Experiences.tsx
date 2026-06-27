@@ -17,7 +17,7 @@ const EXPERIENCE_TABS = [
     title: "SVARNA FARM",
     heading: "Eco-Friendly Farm-to-Table Journey",
     description: "An organic farm spanning 2 hectares of lush land, cultivating local herbs, vegetables, and flowers. Guests can participate in planting workshops, farm-to-table cooking classes, and morning harvest tours.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1537953773315-2213cdab67c7?q=80&w=800",
     features: ["Organic Harvesting", "Cooking Classes", "Herbal Medicine Workshop", "Farm Tours"]
   },
   {
@@ -25,7 +25,7 @@ const EXPERIENCE_TABS = [
     title: "POOLS & BEACHES",
     heading: "14 Pools & Private White Sand Beach",
     description: "Relax at the legendary Ocean Beach Pool, chill in Rimba Cabanas, or escape to Kubu Beach—our exclusive white-sand beach tucked at the foot of towering limestone cliffs.",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800",
     features: ["Ocean Beach Pool", "Kubu Beach Club", "Aquatonic Pool", "Rimba Pools"]
   },
   {
@@ -44,21 +44,21 @@ export default function Experiences() {
   const currentTab = EXPERIENCE_TABS.find((t) => t.id === activeTab) || EXPERIENCE_TABS[0];
 
   return (
-    <section id="experience" className="py-32 px-6 lg:px-16 bg-[#1c1c1c] text-brand-cream border-t border-[#2a2a2a] relative">
+    <section id="experience" className="py-32 px-6 lg:px-16 bg-card text-foreground border-t border-border relative">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20 reveal">
           <span className="text-[10px] font-semibold tracking-[0.35em] text-brand-gold uppercase block mb-3">
             Wellness & Activities
           </span>
-          <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-foreground mb-6">
             Curated Experiences
           </h2>
           <div className="h-[1px] w-20 bg-brand-gold/30 mx-auto" />
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center border-b border-[#2a2a2a] mb-16 reveal">
+        <div className="flex flex-wrap justify-center border-b border-border mb-16 reveal">
           {EXPERIENCE_TABS.map((tab) => (
             <button
               key={tab.id}
@@ -66,7 +66,7 @@ export default function Experiences() {
               className={`px-8 py-5 text-xs font-semibold tracking-[0.25em] transition-all relative ${
                 activeTab === tab.id
                   ? "text-brand-gold font-bold"
-                  : "text-brand-grey hover:text-brand-cream"
+                  : "text-brand-grey hover:text-foreground"
               }`}
             >
               {tab.title}
@@ -84,7 +84,7 @@ export default function Experiences() {
             <span className="text-[10px] font-bold tracking-[0.3em] text-brand-gold uppercase">
               {currentTab.title}
             </span>
-            <h3 className="text-3xl md:text-4xl font-light tracking-wide leading-tight text-white">
+            <h3 className="text-3xl md:text-4xl font-light tracking-wide leading-tight text-foreground">
               {currentTab.heading}
             </h3>
             <p className="text-sm md:text-base text-brand-grey leading-relaxed font-serif">
@@ -96,7 +96,7 @@ export default function Experiences() {
               {currentTab.features.map((feature, idx) => (
                 <div key={idx} className="flex items-center space-x-3">
                   <div className="w-1.5 h-1.5 bg-brand-gold rounded-none" />
-                  <span className="text-[11px] font-semibold tracking-wider text-brand-cream/80">
+                  <span className="text-[11px] font-semibold tracking-wider text-foreground/80">
                     {feature}
                   </span>
                 </div>
@@ -105,7 +105,7 @@ export default function Experiences() {
           </div>
 
           {/* Image Display */}
-          <div className="relative h-[320px] sm:h-[480px] overflow-hidden border border-[#2a2a2a]">
+          <div className="relative h-[320px] sm:h-[480px] overflow-hidden border border-border">
             <Image
               src={currentTab.image}
               alt={currentTab.title}

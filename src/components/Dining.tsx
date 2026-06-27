@@ -35,14 +35,14 @@ const DINING_LIST = [
 
 export default function Dining() {
   return (
-    <section id="dining" className="py-32 px-6 lg:px-16 bg-[#121212] text-brand-cream border-t border-[#2a2a2a]">
+    <section id="dining" className="py-32 px-6 lg:px-16 bg-background text-foreground border-t border-border">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-24 reveal">
           <span className="text-[10px] font-semibold tracking-[0.35em] text-brand-gold uppercase block mb-3">
             30+ Restaurants & Bars
           </span>
-          <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-foreground mb-6">
             World-Class Dining
           </h2>
           <div className="h-[1px] w-20 bg-brand-gold/30 mx-auto mb-6" />
@@ -53,7 +53,7 @@ export default function Dining() {
 
         {/* Feature: Rock Bar */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24 items-center reveal">
-          <div className="lg:col-span-7 relative h-[320px] sm:h-[480px] overflow-hidden border border-[#2a2a2a]">
+          <div className="lg:col-span-7 relative h-[320px] sm:h-[480px] overflow-hidden border border-border">
             <Image
               src={FEATURED_DINING.image}
               alt={FEATURED_DINING.name}
@@ -66,7 +66,7 @@ export default function Dining() {
             <span className="text-[10px] font-bold tracking-[0.25em] text-brand-grey uppercase">
               {FEATURED_DINING.category}
             </span>
-            <h3 className="text-3xl md:text-4xl font-light tracking-wide leading-tight text-white">
+            <h3 className="text-3xl md:text-4xl font-light tracking-wide leading-tight text-foreground">
               {FEATURED_DINING.name}
             </h3>
             <p className="text-sm md:text-base text-brand-grey leading-relaxed font-serif">
@@ -75,7 +75,7 @@ export default function Dining() {
             <div className="pt-2">
               <Link
                 href={FEATURED_DINING.link}
-                className="inline-flex items-center space-x-2 text-[10px] font-bold tracking-[0.25em] uppercase text-brand-gold border-b border-brand-gold/30 pb-1.5 hover:text-brand-cream hover:border-brand-cream transition-colors"
+                className="inline-flex items-center space-x-2 text-[10px] font-bold tracking-[0.25em] uppercase text-brand-gold border-b border-brand-gold/30 pb-1.5 hover:text-foreground hover:border-foreground transition-colors"
               >
                 <span>Reserve a Table at Rock Bar</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -87,7 +87,7 @@ export default function Dining() {
         {/* Remaining Dining List Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
           {DINING_LIST.map((dining, idx) => (
-            <div key={idx} className="group bg-[#1c1c1c] border border-[#2a2a2a] hover:border-brand-gold/20 transition-all duration-300">
+            <div key={idx} className="group bg-card border border-border hover:border-brand-gold/20 transition-all duration-300">
               <div className="relative h-[200px] overflow-hidden">
                 <Image
                   src={dining.image}
@@ -101,7 +101,7 @@ export default function Dining() {
                 <span className="text-[9px] font-bold tracking-[0.2em] text-brand-gold block">
                   {dining.category}
                 </span>
-                <h4 className="text-lg font-light tracking-wide text-white">
+                <h4 className="text-lg font-light tracking-wide text-foreground">
                   {dining.name}
                 </h4>
                 <p className="text-xs text-brand-grey leading-relaxed font-serif">
